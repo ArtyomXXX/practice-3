@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 50px;
+}
+
+/* ____________________________________________ Строка Поиска */
+
+.search {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #362f4b;
+    outline: none;
+    border-radius: 10px;
+}
+.search:focus {
+    box-shadow: 0 0 5px 0 #362f4b;
+}
+
+/* ____________________________________________ Таблица */
+
+table {
+    width: 100%;
+    font-family: arial, sans-serif;
+    border: 1px solid #362f4b;
+}
+
+.table__header, td  {
+    padding: 10px;
+    border: 1px solid #000000;
+}
+
+.table__header {
+    text-align: center;
+    color: white;
+    background-color: #362f4b;
+    cursor: pointer;
+}
+.table__header:hover {
+    background-color: #8400ff;
+}
+
+tr:nth-child(odd):hover {
+    background-color: #d3d3d3;
+}
+
+tr:nth-child(even) {
+    background-color: #c7bfe0;
+}
+tr:nth-child(even):hover {
+    background-color: #a18ce1;
+}
