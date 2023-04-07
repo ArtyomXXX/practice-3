@@ -37,18 +37,18 @@ table {
 .table__header {
     text-align: center;
     color: white;
-    background-color: #362f4b;
+    background-color: #6a6183;
     -webkit-user-select: none;
     user-select: none;
     cursor: pointer;
 }
 .table__header:hover {
-    background-color: rgb(132, 0, 255);
+    background-color: #6e3afd;
 }
 
 tr:nth-child(even) {
-    background-color: #c7bfe0;
+    background-color:antiquewhite;
 }
 tr:hover {
-    background-color: #a18ce1;
+    background-color:rgb(252, 204, 140);
 }
