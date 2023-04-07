@@ -10,14 +10,14 @@
 
 /* ____________________________________________ Строка Поиска */
 
-.search {
+#search {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #362f4b;
     outline: none;
     border-radius: 10px;
 }
-.search:focus {
+#search:focus {
     box-shadow: 0 0 5px 0 #362f4b;
 }
 
@@ -38,19 +38,17 @@ table {
     text-align: center;
     color: white;
     background-color: #362f4b;
+    -webkit-user-select: none;
+    user-select: none;
     cursor: pointer;
 }
 .table__header:hover {
-    background-color: #8400ff;
-}
-
-tr:nth-child(odd):hover {
-    background-color: #d3d3d3;
+    background-color: rgb(132, 0, 255);
 }
 
 tr:nth-child(even) {
     background-color: #c7bfe0;
 }
-tr:nth-child(even):hover {
+tr:hover {
     background-color: #a18ce1;
 }

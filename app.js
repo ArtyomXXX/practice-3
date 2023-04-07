@@ -1,6 +1,6 @@
-const tbody = document.querySelector("tbody");
-const columns = document.querySelectorAll(".table__header");
-const search = document.querySelector(".search");
+const tbody = document.getElementById('tbody');
+const columns = document.querySelectorAll('.table__header');
+const search = document.getElementById('search');
 
 let posts = [];
 let filteredPosts = [];
@@ -10,12 +10,14 @@ let lastClickedCol = "";
 const renderTable = (parentNode, posts) => {
   parentNode.innerHTML = "";
   posts.forEach((el) => {
-    const row = `<tr class ="table__row">
-      <td class ="table__cell-userId">${el.userId}</td>
+    const row = `
+    <tr class ="table__row">
       <td class ="table__cell-id">${el.id}</td>
+      <td class ="table__cell-userId">${el.userId}</td>
       <td class ="table__cell-title">${el.title}</td>
       <td class ="table__cell-body">${el.body}</td>
-    </tr>`;
+    </tr>
+    `;
     parentNode.insertAdjacentHTML("beforeend", row);
   });
 };
@@ -54,8 +56,8 @@ search.addEventListener("input", (e) => {
   if (e.target.value.length > 2) {
     filteredPosts = posts.filter((el) => {
       return (
-        String(el.userId).indexOf(e.target.value) > -1 ||
         String(el.id).indexOf(e.target.value) > -1 ||
+        String(el.userId).indexOf(e.target.value) > -1 ||
         String(el.title).indexOf(e.target.value) > -1 ||
         String(el.body).indexOf(e.target.value) > -1
       );
