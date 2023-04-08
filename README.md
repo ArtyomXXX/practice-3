@@ -1,5 +1,3 @@
-# practice-2
-
-# Запрос даннных в виде таблицы
+# practice-3
 
 https://artyomxxx.github.io/practice-3/
