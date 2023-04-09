@@ -18,11 +18,11 @@ const renderTable = (parentNode, posts) => {
       <td class ="table__cell-body">${el.body}</td>
     </tr>
     `;
-    parentNode.insertAdjacentHTML("beforeend", row);
+    parentNode.insertAdjacentHTML('beforeend', row);
   });
 };
 
-fetch("https://jsonplaceholder.typicode.com/posts")
+fetch('https://jsonplaceholder.typicode.com/posts')
   .then((response) => response.json())
   .then((data) => {
     posts = data;
@@ -30,7 +30,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   });
 
 columns.forEach((col) => {
-  col.addEventListener("click", (e) => {
+  col.addEventListener('click', (e) => {
     const sortVal = e.target.innerHTML;
     const postsToSort = filteredPosts.length ? filteredPosts : posts;
 
@@ -52,7 +52,7 @@ columns.forEach((col) => {
   });
 });
 
-search.addEventListener("input", (e) => {
+search.addEventListener('input', (e) => {
   if (e.target.value.length > 2) {
     filteredPosts = posts.filter((el) => {
       return (
