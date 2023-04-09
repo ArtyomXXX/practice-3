@@ -44,8 +44,8 @@ columns.forEach((col) => {
 
     const sortedPosts = postsToSort.sort((a, b) => {
       return defaultSort 
-          ? a[`${sortVal}`] > b[`${sortVal}`] ? 1 : a[`${sortVal}`] < b[`${sortVal}`] ? -1 : 0
-          : a[`${sortVal}`] < b[`${sortVal}`] ? 1 : a[`${sortVal}`] > b[`${sortVal}`] ? -1 : 0;
+          ? a[sortVal] > b[sortVal] ? 1 : a[sortVal] < b[sortVal] ? -1 : 0
+          : a[sortVal] < b[sortVal] ? 1 : a[sortVal] > b[sortVal] ? -1 : 0;
     });
 
     renderTable(tbody, sortedPosts);
